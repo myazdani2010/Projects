@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+<meta charset="UTF-8">
+<title>Test form</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+<style type="text/css">
+	input.ng-invalid.ng-dirty{border:1px solid red;}
+</style>
+
+</head>
+<body>
+
+<form name="frm">
+
+<input type="email" name="email" placeholder="Email" ng-model="user.email" required>
+<span ng-show="frm.email.$dirty && frm.email.$error.required">Required!</span>
+<span ng-show="frm.email.$dirty && frm.email.$error.email">Not an email!</span>
+
+
+<input type="password" name="password" 
+		placeholder="Password" ng-model="user.password" required 
+		ng-minlength="5" ng-maxlength="10">
+		
+<span ng-show="frm.password.$dirty && frm.password.$error.required">Required!</span>
+<span ng-show="frm.password.$dirty && frm.password.$error.minlength">Too short!</span>
+<span ng-show="frm.password.$dirty && frm.password.$error.maxlength">Too long!</span>
+
+<button ng-disabled="frm.$invalid">Log On</button>
+</form>
+
+</body>
+</html>

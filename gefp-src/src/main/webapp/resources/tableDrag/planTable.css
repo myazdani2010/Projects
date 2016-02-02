@@ -1,0 +1,58 @@
+table {
+/*     border-collapse:collapse; */
+/*     font-family:Tahoma,Helvetica,Arial,sans-serif; */
+background-color: transparent
+}
+td, th {
+    text-align:left;
+    vertical-align:top;
+}
+
+
+
+tr{
+    marging:0;
+    padding:0;
+}
+
+table td, table th {
+/* 		border: 1px solid #222222; */
+    font-size:0.9em;
+    padding:3px;
+}
+
+#checkpointTable table td, table th {
+		border: 1px solid #0000a0;
+		background: #e4e8e9;
+    font-size:0.9em;
+    padding:3px;
+}
+
+table.sar-table th {
+    height:20px;
+    width:100px;
+    cursor:move;
+}
+
+#handlerTable th {
+    cursor:default;
+}
+
+.some-handle {
+    cursor:move;
+}
+
+#constrainTable th {
+    cursor:default;
+}
+
+#constrainTable th.accept {
+    cursor:move;
+}
+
+.some-handle {
+    background-image:url("handle.png");
+    background-repeat:repeat-x;
+    height:18px;
+    margin:0 1px;
+}
